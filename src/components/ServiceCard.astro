@@ -1,0 +1,72 @@
+---
+interface Props {
+	title: string;
+	features: string[];
+	duration: string;
+	priceWeekday: string;
+	priceWeekend: string;
+	icon: string;
+	color: 'orange' | 'pink' | 'green';
+	additionalInfo?: string;
+}
+
+const { title, features, duration, priceWeekday, priceWeekend, icon, color, additionalInfo } = Astro.props;
+
+const colorClasses = {
+	orange: 'from-primary-500 to-vibrant-yellow',
+	pink: 'from-secondary-500 to-vibrant-pink',
+	green: 'from-accent-500 to-vibrant-blue'
+};
+
+const bgColorClasses = {
+	orange: 'bg-primary-50',
+	pink: 'bg-secondary-50',
+	green: 'bg-accent-50'
+};
+---
+
+<div class={`${bgColorClasses[color]} rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col h-full`}>
+	<div class="flex items-center gap-4 mb-6">
+		<div class={`w-16 h-16 bg-gradient-to-br ${colorClasses[color]} rounded-2xl flex items-center justify-center text-3xl transform rotate-3 hover:rotate-0 transition-transform`}>
+			{icon}
+		</div>
+		<h3 class="text-2xl font-bold text-gray-800">{title}</h3>
+	</div>
+
+	<ul class="space-y-3 mb-6 flex-grow">
+		{features.map((feature) => (
+			<li class="flex items-start gap-2">
+				<svg class="w-6 h-6 text-accent-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+				</svg>
+				<span class="text-gray-700 leading-relaxed">{feature}</span>
+			</li>
+		))}
+	</ul>
+
+	<div class="space-y-4 mt-auto">
+		<div class="bg-white/80 rounded-xl p-4">
+			<p class="text-sm text-gray-600 mb-2">
+				<span class="font-semibold">⏱️ Duración:</span> {duration}
+			</p>
+			<div class="space-y-1">
+				<p class="text-lg font-semibold text-gray-800">
+					💰 L-J: <span class="text-primary-600">{priceWeekday}</span>
+				</p>
+				<p class="text-lg font-semibold text-gray-800">
+					💰 V-S-D: <span class="text-secondary-600">{priceWeekend}</span>
+				</p>
+			</div>
+			{additionalInfo && (
+				<p class="text-sm text-gray-600 mt-2 italic">{additionalInfo}</p>
+			)}
+		</div>
+
+		<a
+			href="#contacto"
+			class={`block w-full text-center px-6 py-4 bg-gradient-to-r ${colorClasses[color]} text-white font-bold rounded-xl hover:shadow-xl hover:scale-105 transition-all duration-300`}
+		>
+			Reservar {title}
+		</a>
+	</div>
+</div>
