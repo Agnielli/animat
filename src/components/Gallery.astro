@@ -1,0 +1,69 @@
+---
+const images = [
+  {
+    src: 'https://images.unsplash.com/photo-1740033135773-bf7c886ae45a?q=80&w=2340&auto=format&fit=crop',
+    alt: 'Castillo Hinchable Colorido',
+    span: 'md:col-span-2 md:row-span-2',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1663797184266-20c14bfee71a?q=80&w=2342&auto=format&fit=crop',
+    alt: 'Niños Jugando',
+    span: 'md:col-span-1 md:row-span-1',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=800&auto=format&fit=crop',
+    alt: 'Pintacaras',
+    span: 'md:col-span-1 md:row-span-1',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1507836127377-5757cd3e6e6b?q=80&w=2346&auto=format&fit=crop',
+    alt: 'Fiesta de Cumpleaños',
+    span: 'md:col-span-1 md:row-span-1',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1633846850057-f8e8217b7c48?q=80&w=1287&auto=format&fit=crop',
+    alt: 'Diversión en Grupo',
+    span: 'md:col-span-1 md:row-span-1',
+  },
+];
+---
+
+<section id="galeria" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2
+        class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent mb-4 pb-2"
+      >
+        Galería de Momentos
+      </h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Descubre la magia que llevamos a cada celebración. ¡Una imagen vale más
+        que mil palabras!
+      </p>
+    </div>
+
+    <div
+      class="grid grid-cols-1 md:grid-cols-4 grid-rows-auto gap-4 h-auto md:h-[600px]"
+    >
+      {
+        images.map((image) => (
+          <div
+            class={`relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer ${image.span}`}
+          >
+            <img
+              src={image.src}
+              alt={image.alt}
+              loading="lazy"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+              <span class="text-white font-bold text-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                {image.alt}
+              </span>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

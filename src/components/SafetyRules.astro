@@ -1,0 +1,89 @@
+---
+const rules = [
+  {
+    icon: '👟',
+    title: 'Descalzarse',
+    description:
+      'Es obligatorio entrar al castillo sin zapatos para proteger la lona y a los niños.',
+  },
+  {
+    icon: '🍔',
+    title: 'Sin Comida ni Bebida',
+    description:
+      'Prohibido introducir alimentos, chicles, caramelos o bebidas dentro de la atracción.',
+  },
+  {
+    icon: '👓',
+    title: 'Objetos Personales',
+    description:
+      'Dejar fuera gafas, relojes, colgantes y cualquier objeto punzante o duro.',
+  },
+  {
+    icon: '👥',
+    title: 'Supervisión Adulta',
+    description:
+      'Aunque haya monitores, se recomienda la presencia de adultos responsables cerca.',
+  },
+  {
+    icon: '⚖️',
+    title: 'Grupos por Edades',
+    description:
+      'Evitar mezclar niños de edades/tamaños muy diferentes para prevenir accidentes.',
+  },
+  {
+    icon: '🚫',
+    title: 'No Trepar',
+    description:
+      'No colgarse de las paredes laterales ni subirse a los muros de contención.',
+  },
+];
+---
+
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2
+        class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent mb-4 pb-2"
+      >
+        Normas de Seguridad
+      </h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Tu seguridad es nuestra prioridad. Para garantizar la máxima diversión
+        sin riesgos, sigue estas sencillas normas.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      {
+        rules.map((rule) => (
+          <div class="bg-primary-50 rounded-2xl p-6 flex gap-4 hover:shadow-lg transition-shadow duration-300 border border-primary-100">
+            <div class="flex-shrink-0 w-12 h-12 bg-white rounded-full flex items-center justify-center text-2xl shadow-sm">
+              {rule.icon}
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-gray-800 mb-1">{rule.title}</h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                {rule.description}
+              </p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="mt-12 text-center">
+      <div
+        class="inline-flex items-center gap-3 bg-yellow-100 border border-yellow-200 text-yellow-800 px-6 py-3 rounded-full text-sm font-medium"
+      >
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path
+            fill-rule="evenodd"
+            d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
+            clip-rule="evenodd"></path>
+        </svg>
+        El incumplimiento de estas normas podría suponer la clausura inmediata de
+        la atracción.
+      </div>
+    </div>
+  </div>
+</section>
