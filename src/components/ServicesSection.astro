@@ -1,0 +1,90 @@
+---
+import ServiceCard from './ServiceCard.astro';
+---
+
+<section id="servicios" class="py-20 bg-gradient-to-b from-white to-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2
+        class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent mb-4"
+      >
+        Nuestros Servicios
+      </h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Elige el paquete perfecto para tu evento. Todos nuestros servicios
+        incluyen monitores profesionales y garantía de diversión.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <ServiceCard
+        title="Castillo Hinchable Básico"
+        icon="🏰"
+        color="orange"
+        duration="3 horas"
+        priceWeekday="100€ + IVA"
+        priceWeekend="110€ + IVA"
+        features={[
+          'Monitor profesional incluido',
+          'Control de aforo y seguridad',
+          'Altavoz con música adaptada por edades',
+          'Castillo según disponibilidad',
+          'Instalación y recogida incluida',
+          'Seguro de responsabilidad civil',
+        ]}
+      />
+
+      <ServiceCard
+        title="Castillo + Pintacaras"
+        icon="🎨"
+        color="pink"
+        duration="3 horas"
+        priceWeekday="150€ + IVA"
+        priceWeekend="160€ + IVA"
+        features={[
+          'Todo lo del servicio básico',
+          'Monitora especializada en pintacaras',
+          'Tatuajes temporales incluidos',
+          'Lacas de colores para el pelo',
+          'Globoflexia con figuras',
+          'Materiales hipoalergénicos',
+        ]}
+      />
+
+      <ServiceCard
+        title="Opción Completa"
+        icon="🎪"
+        color="green"
+        duration="3 horas"
+        priceWeekday="180€ + IVA"
+        priceWeekend="190€ + IVA"
+        additionalInfo="Más de 25 niños: consultar precio"
+        features={[
+          'Actividades adaptadas por edad y lugar',
+          'Juegos de competición con premios',
+          'Música, bailes y coreografías',
+          'Animación dentro y fuera del castillo',
+          'Pintacaras, tatuajes y globoflexia',
+          'Material completo incluido',
+          'Hasta 25 niños de aforo',
+        ]}
+      />
+    </div>
+
+    <div
+      class="mt-16 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-3xl p-8 md:p-12 text-white text-center max-w-4xl mx-auto"
+    >
+      <h3 class="text-3xl font-bold mb-4">¿Buscas algo personalizado?</h3>
+      <p class="text-lg mb-6 opacity-90">
+        Podemos adaptar cualquier servicio a tus necesidades específicas.
+        Contáctanos y cuéntanos tu idea.
+      </p>
+      <a
+        href="#contacto"
+        class="inline-block px-8 py-4 bg-white text-primary-600 font-bold text-lg rounded-full hover:shadow-2xl hover:scale-105 transition-all duration-300"
+      >
+        Solicitar Presupuesto Personalizado
+      </a>
+    </div>
+  </div>
+</section>

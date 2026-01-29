@@ -1,0 +1,161 @@
+---
+
+---
+
+<section
+  id="inicio"
+  class="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 md:pt-20"
+>
+  <div
+    class="absolute inset-0 bg-gradient-to-br from-primary-100 via-secondary-100 to-accent-100 opacity-60"
+  >
+  </div>
+  <div class="absolute inset-0">
+    <div
+      class="absolute top-20 left-10 w-32 h-32 bg-vibrant-yellow rounded-full blur-3xl opacity-30 animate-float"
+    >
+    </div>
+    <div
+      class="absolute bottom-20 right-10 w-40 h-40 bg-vibrant-pink rounded-full blur-3xl opacity-30 animate-float-delayed"
+    >
+    </div>
+    <div
+      class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-vibrant-blue rounded-full blur-3xl opacity-20 animate-pulse-slow"
+    >
+    </div>
+  </div>
+
+  <div class="container mx-auto px-4 relative z-10 text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="mb-6 flex justify-center gap-4 text-5xl">🎈 🎉 🎊 🎭 🎪</div>
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+        <span
+          class="bg-gradient-to-r from-primary-600 via-secondary-600 to-accent-600 bg-clip-text text-transparent"
+        >
+          ¡Diversión sin límites
+        </span>
+        <br />
+        <span class="text-gray-800">para tus pequeños!</span>
+      </h1>
+      <p
+        class="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed max-w-2xl mx-auto"
+      >
+        Animación infantil profesional con castillos hinchables, pintacaras y
+        actividades personalizadas. Hacemos de cada celebración un recuerdo
+        inolvidable.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a
+          href="#servicios"
+          class="px-8 py-4 bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-bold text-lg rounded-full hover:shadow-2xl hover:scale-110 transition-all duration-300 inline-flex items-center gap-2"
+        >
+          Ver Servicios
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </a>
+        <a
+          href="#contacto"
+          class="px-8 py-4 bg-white text-gray-800 font-bold text-lg rounded-full hover:shadow-2xl hover:scale-110 transition-all duration-300 border-2 border-gray-800"
+        >
+          Contactar Ahora
+        </a>
+      </div>
+
+      <div
+        class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto pb-28 md:pb-0"
+      >
+        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
+          <div class="text-3xl mb-2">🏰</div>
+          <div class="font-bold text-2xl text-primary-600">100+</div>
+          <div class="text-sm text-gray-600">Eventos Realizados</div>
+        </div>
+        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
+          <div class="text-3xl mb-2">😊</div>
+          <div class="font-bold text-2xl text-secondary-600">98%</div>
+          <div class="text-sm text-gray-600">Satisfacción</div>
+        </div>
+        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
+          <div class="text-3xl mb-2">👨‍👩‍👧‍👦</div>
+          <div class="font-bold text-2xl text-accent-600">5000+</div>
+          <div class="text-sm text-gray-600">Niños Felices</div>
+        </div>
+        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
+          <div class="text-3xl mb-2">⭐</div>
+          <div class="font-bold text-2xl text-vibrant-yellow">10+</div>
+          <div class="text-sm text-gray-600">Años Experiencia</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
+  >
+    <svg
+      class="w-8 h-8 text-gray-600"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+    </svg>
+  </div>
+</section>
+
+<style>
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes float-delayed {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+  }
+
+  @keyframes pulse-slow {
+    0%,
+    100% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 0.4;
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float-delayed 8s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 10s ease-in-out infinite;
+  }
+</style>
